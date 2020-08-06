@@ -1,0 +1,11 @@
+F:\SKCSOURCES\LearningPath\Lambdas\bin\Debug\netcoreapp3.1\Lambdas.exe
+F:\SKCSOURCES\LearningPath\Lambdas\bin\Debug\netcoreapp3.1\Lambdas.deps.json
+F:\SKCSOURCES\LearningPath\Lambdas\bin\Debug\netcoreapp3.1\Lambdas.runtimeconfig.json
+F:\SKCSOURCES\LearningPath\Lambdas\bin\Debug\netcoreapp3.1\Lambdas.runtimeconfig.dev.json
+F:\SKCSOURCES\LearningPath\Lambdas\bin\Debug\netcoreapp3.1\Lambdas.dll
+F:\SKCSOURCES\LearningPath\Lambdas\bin\Debug\netcoreapp3.1\Lambdas.pdb
+F:\SKCSOURCES\LearningPath\Lambdas\obj\Debug\netcoreapp3.1\Lambdas.csprojAssemblyReference.cache
+F:\SKCSOURCES\LearningPath\Lambdas\obj\Debug\netcoreapp3.1\Lambdas.AssemblyInfoInputs.cache
+F:\SKCSOURCES\LearningPath\Lambdas\obj\Debug\netcoreapp3.1\Lambdas.AssemblyInfo.cs
+F:\SKCSOURCES\LearningPath\Lambdas\obj\Debug\netcoreapp3.1\Lambdas.dll
+F:\SKCSOURCES\LearningPath\Lambdas\obj\Debug\netcoreapp3.1\Lambdas.pdb
