@@ -1,0 +1,17 @@
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\bin\Debug\netstandard2.0\KellerTrack.deps.json
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\bin\Debug\netstandard2.0\KellerTrack.dll
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\bin\Debug\netstandard2.0\ref\KellerTrack.dll
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\bin\Debug\netstandard2.0\KellerTrack.pdb
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\KellerTrack.csprojAssemblyReference.cache
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\App.xaml.g.cs
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\KellerTrack.AssemblyInfoInputs.cache
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\KellerTrack.AssemblyInfo.cs
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\XamlC.stamp
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\KellerTrack.dll
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\ref\KellerTrack.dll
+F:\RobinSources\KellerTrack\KellerTrack\KellerTrack\obj\Debug\netstandard2.0\KellerTrack.pdb
