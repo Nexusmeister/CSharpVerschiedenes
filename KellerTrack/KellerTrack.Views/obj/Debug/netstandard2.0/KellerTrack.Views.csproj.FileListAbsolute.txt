@@ -1,0 +1,8 @@
+F:\RobinSources\KellerTrack\KellerTrack.Views\bin\Debug\netstandard2.0\KellerTrack.Views.deps.json
+F:\RobinSources\KellerTrack\KellerTrack.Views\bin\Debug\netstandard2.0\KellerTrack.Views.dll
+F:\RobinSources\KellerTrack\KellerTrack.Views\bin\Debug\netstandard2.0\KellerTrack.Views.pdb
+F:\RobinSources\KellerTrack\KellerTrack.Views\obj\Debug\netstandard2.0\KellerTrack.Views.csprojAssemblyReference.cache
+F:\RobinSources\KellerTrack\KellerTrack.Views\obj\Debug\netstandard2.0\KellerTrack.Views.AssemblyInfoInputs.cache
+F:\RobinSources\KellerTrack\KellerTrack.Views\obj\Debug\netstandard2.0\KellerTrack.Views.AssemblyInfo.cs
+F:\RobinSources\KellerTrack\KellerTrack.Views\obj\Debug\netstandard2.0\KellerTrack.Views.dll
+F:\RobinSources\KellerTrack\KellerTrack.Views\obj\Debug\netstandard2.0\KellerTrack.Views.pdb

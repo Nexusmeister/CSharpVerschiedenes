@@ -1,0 +1,8 @@
+F:\RobinSources\KellerTrack\KellerTrack.Models\bin\Debug\netstandard2.0\KellerTrack.Models.deps.json
+F:\RobinSources\KellerTrack\KellerTrack.Models\bin\Debug\netstandard2.0\KellerTrack.Models.dll
+F:\RobinSources\KellerTrack\KellerTrack.Models\bin\Debug\netstandard2.0\KellerTrack.Models.pdb
+F:\RobinSources\KellerTrack\KellerTrack.Models\obj\Debug\netstandard2.0\KellerTrack.Models.csprojAssemblyReference.cache
+F:\RobinSources\KellerTrack\KellerTrack.Models\obj\Debug\netstandard2.0\KellerTrack.Models.AssemblyInfoInputs.cache
+F:\RobinSources\KellerTrack\KellerTrack.Models\obj\Debug\netstandard2.0\KellerTrack.Models.AssemblyInfo.cs
+F:\RobinSources\KellerTrack\KellerTrack.Models\obj\Debug\netstandard2.0\KellerTrack.Models.dll
+F:\RobinSources\KellerTrack\KellerTrack.Models\obj\Debug\netstandard2.0\KellerTrack.Models.pdb
