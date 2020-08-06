@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="TLWindowsEditorWPFDemo.PictureUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TLWindowsEditorWPFDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="369" d:DesignWidth="644" Loaded="UserControl_Loaded">
+    <Grid>
+        <GroupBox Header="Picture Source" Margin="16,12,0,0" Height="63" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363">
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <TextBox Name="txtFileName" Height="24" Width="274" HorizontalAlignment="Left" Text="[Picture file]" IsReadOnly="True"/>
+                <Button Name="btnSelectPicture" Height="24" Margin="10,0,0,0" Click="btnSelectPicture_Click" Width="55">Select...</Button>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Sizing &amp; Rotation" Margin="16,81,0,0" Padding="5" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363">
+            <StackPanel>
+                <RadioButton Name="rbtOriginalSize" IsChecked="True" Checked="rbtOriginalSize_Checked">Keep Original Size</RadioButton>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <RadioButton Name="rbtResize"  VerticalAlignment="Center" Checked="rbtResize_Checked">Resize:</RadioButton>
+                    <TextBlock Margin="20,0,0,0" Text="Width" VerticalAlignment="Center"></TextBlock>
+                    <TextBox Margin="5,0,0,0" Name="txtNewWidth" Height="24" Width="50"  my:TextBoxMaskBehavior.Mask="Decimal" my:TextBoxMaskBehavior.MinimumValue="0" TextChanged="txtNewWidth_TextChanged"></TextBox>
+                    <TextBlock Margin="20,0,0,0" Text="Height" VerticalAlignment="Center"></TextBlock>
+                    <TextBox Margin="5,0,0,0" Name="txtNewHeight" Height="24" Width="50" my:TextBoxMaskBehavior.Mask="Decimal" my:TextBoxMaskBehavior.MinimumValue="0" TextChanged="txtNewHeight_TextChanged"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="Lock Aspect Ratio:" VerticalAlignment="Center"></TextBlock>
+                    <ComboBox Name="cboLockAspectRatio" Height="24" Width="100" Margin="10,0,0,0" SelectionChanged="cboLockAspectRatio_SelectionChanged"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="Flip:" VerticalAlignment="Center"></TextBlock>
+                    <ComboBox Name="cboFlip" Height="24" Width="100" Margin="10,0,0,0" SelectionChanged="cboFlip_SelectionChanged"></ComboBox>
+                    <TextBlock Text="Rotation [0-360]:" Margin="30,0,0,0" VerticalAlignment="Center" ></TextBlock>
+                    <TextBox Margin="5,0,0,0" Name="txtRotation" Height="24" Width="50" my:TextBoxMaskBehavior.Mask="Integer" my:TextBoxMaskBehavior.MinimumValue="0" my:TextBoxMaskBehavior.MaximumValue="360" TextChanged="txtRotation_TextChanged"></TextBox>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Black &amp; White Conversion" Margin="16,232,0,0" Padding="5" Height="123" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Margin="0,0,0,0" Name="chkConvertToMonochrome" Checked="ChkConvertToMonochrome_Checked"  Unchecked="ChkConvertToMonochrome_Checked">Convert to Monochrome?</CheckBox>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text="Dithering Method:" VerticalAlignment="Center"></TextBlock>
+                    <ComboBox Name="cboDithering" Height="24" Width="200" Margin="10,0,0,0" SelectionChanged="cboDithering_SelectionChanged"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Name="lblThreshold" Text="Threshold (50%):" Width="105" VerticalAlignment="Center"></TextBlock>
+                    <Slider Name="sldThreshold" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1" Width="230" Value="50" ValueChanged="sldThreshold_ValueChanged"></Slider>
+                </StackPanel>
+                <CheckBox Margin="0,10,0,0" Name="chkInvert" Checked="chkInvert_Checked" Unchecked="chkInvert_Checked">Invert</CheckBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Preview" Margin="404,12,12,15">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Image Name="imgPreview" Stretch="None"/>   
+            </ScrollViewer>
+        </GroupBox>
+    </Grid>
+</UserControl>

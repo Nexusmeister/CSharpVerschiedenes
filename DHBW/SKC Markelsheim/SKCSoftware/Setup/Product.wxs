@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define Ergebnisanzeige_TargetDir=$(var.Ergebnisanzeige.TargetDir)?><?define SKCDLL_TargetDir=$(var.SKCDLL.TargetDir)?>
+	<Product Id="*" Name="SKC Ergebnisanzeige" Language="1033" Version="1.30.0.1" Manufacturer="Robin Kaltenbach" UpgradeCode="d43da383-16f8-4c33-b824-1803b1738170">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [Ergebnisanzeige] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="SKC Ergebnisanzeige" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentGroupRef Id="Pictures_files" />
+			<ComponentGroupRef Id="Ressourcen_files" />    
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="SKC Ergebnisanzeige">
+				  <Directory Id="Ressourcen" Name="Ressourcen" />
+				  <Directory Id="Pictures" Name="Pictures" />
+				</Directory>
+			</Directory>   
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">	
+			<Component Id="README.txt" Guid="b5839f75-9bea-454a-b87c-a267e43944f9">
+			  <File Id="README.txt" Name="README.txt" Source="$(var.Ergebnisanzeige_TargetDir)README.txt" />
+			</Component>
+			<Component Id="Ergebnisanzeige.exe" Guid="db3012ae-f25f-46a4-980d-73001eeb226e">
+			  <File Id="Ergebnisanzeige.exe" Name="Ergebnisanzeige.exe" Source="$(var.Ergebnisanzeige_TargetDir)Ergebnisanzeige.exe" />
+			</Component>
+			<Component Id="Ergebnisanzeige.exe.config" Guid="695ed9fd-5dfb-4f24-a252-94a4ba99bbcf">
+			  <File Id="Ergebnisanzeige.exe.config" Name="Ergebnisanzeige.exe.config" Source="$(var.Ergebnisanzeige_TargetDir)Ergebnisanzeige.exe.config" />
+			</Component>
+			<Component Id="SKCDLL.dll" Guid="317d9823-b375-44fd-9c53-2ecb3d26ee8d">
+			  <File Id="SKCDLL.dll" Name="SKCDLL.dll" Source="$(var.SKCDLL_TargetDir)SKCDLL.dll" />
+			</Component>
+			<Component Id="netstandard.dll" Guid="d526d0e6-21f7-49ec-8616-5548991cc852">
+			  <File Id="netstandard.dll" Name="netstandard.dll" Source="$(var.Ergebnisanzeige_TargetDir)netstandard.dll" />
+			</Component>
+			<Component Id="System.Data.Common.dll" Guid="ed4bf611-874f-4b68-a2fa-824b261303e7">
+			  <File Id="System.Data.Common.dll" Name="System.Data.Common.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Data.Common.dll" />
+			</Component>
+			<Component Id="System.Diagnostics.Tracing.dll" Guid="663d4c51-5ea4-4d77-8b1e-6c70be72913f">
+			  <File Id="System.Diagnostics.Tracing.dll" Name="System.Diagnostics.Tracing.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Diagnostics.Tracing.dll" />
+			</Component>
+			<Component Id="System.Globalization.Extensions.dll" Guid="f06ec7e2-3f89-4d1b-a267-f201a6f98684">
+			  <File Id="System.Globalization.Extensions.dll" Name="System.Globalization.Extensions.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Globalization.Extensions.dll" />
+			</Component>
+			<Component Id="System.IO.Compression.dll" Guid="1c489331-8f7f-4cb4-9324-538591b64e63">
+			  <File Id="System.IO.Compression.dll" Name="System.IO.Compression.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.IO.Compression.dll" />
+			</Component>
+			<Component Id="System.Net.Http.dll" Guid="7de52aa7-0ec1-43a5-8b7f-965086cef7e7">
+			  <File Id="System.Net.Http.dll" Name="System.Net.Http.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Net.Http.dll" />
+			</Component>
+			<Component Id="System.ValueTuple.dll" Guid="44816ff2-9ff1-4657-85cf-c245c2223368">
+			  <File Id="System.ValueTuple.dll" Name="System.ValueTuple.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.ValueTuple.dll" />
+			</Component>
+			<Component Id="System.Diagnostics.StackTrace.dll" Guid="706decc9-e486-4af4-8fa1-ef16675e3a93">
+			  <File Id="System.Diagnostics.StackTrace.dll" Name="System.Diagnostics.StackTrace.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Diagnostics.StackTrace.dll" />
+			</Component>
+			<Component Id="System.Net.Sockets.dll" Guid="e7a2f894-da73-4e11-806b-80a4c56f3966">
+			  <File Id="System.Net.Sockets.dll" Name="System.Net.Sockets.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Net.Sockets.dll" />
+			</Component>
+			<Component Id="System.Threading.Overlapped.dll" Guid="eca63228-dc77-4aa4-ab01-31335a98c7d4">
+			  <File Id="System.Threading.Overlapped.dll" Name="System.Threading.Overlapped.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Threading.Overlapped.dll" />
+			</Component>
+			<Component Id="System.Security.SecureString.dll" Guid="661da7a8-4ffc-4090-a736-515848791be3">
+			  <File Id="System.Security.SecureString.dll" Name="System.Security.SecureString.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Security.SecureString.dll" />
+			</Component>
+			<Component Id="System.Security.Cryptography.Algorithms.dll" Guid="29685607-2e76-4396-ab6a-5349f9bfe363">
+			  <File Id="System.Security.Cryptography.Algorithms.dll" Name="System.Security.Cryptography.Algorithms.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Security.Cryptography.Algorithms.dll" />
+			</Component>
+			<Component Id="System.Xml.XPath.XDocument.dll" Guid="4f87bca0-1928-4e96-ac47-b958c58fad95">
+			  <File Id="System.Xml.XPath.XDocument.dll" Name="System.Xml.XPath.XDocument.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Xml.XPath.XDocument.dll" />
+			</Component>
+			<Component Id="System.Runtime.Serialization.Primitives.dll" Guid="cb7071f4-b5e6-4690-b646-3dea8a1b9080">
+			  <File Id="System.Runtime.Serialization.Primitives.dll" Name="System.Runtime.Serialization.Primitives.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Runtime.Serialization.Primitives.dll" />
+			</Component>
+			<Component Id="System.Runtime.Serialization.Xml.dll" Guid="dd3b350b-0073-435c-a641-bb5058f08af9">
+			  <File Id="System.Runtime.Serialization.Xml.dll" Name="System.Runtime.Serialization.Xml.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Runtime.Serialization.Xml.dll" />
+			</Component>
+			<Component Id="System.Runtime.InteropServices.RuntimeInformation.dll" Guid="8f7450eb-5723-48f8-b45b-7fcf07dbd3c2">
+			  <File Id="System.Runtime.InteropServices.RuntimeInformation.dll" Name="System.Runtime.InteropServices.RuntimeInformation.dll" Source="$(var.Ergebnisanzeige_TargetDir)System.Runtime.InteropServices.RuntimeInformation.dll" />
+			</Component>
+			<Component Id="System.Runtime.Serialization.Formatters.Soap.dll" Guid="4f12aa60-d106-43a1-b234-644664700450">
+			  <File Id="System.Runtime.Serialization.Formatters.Soap.dll" Name="System.Runtime.Serialization.Formatters.Soap.dll" Source="$(var.SKCDLL_TargetDir)System.Runtime.Serialization.Formatters.Soap.dll" />
+			</Component>
+			<Component Id="System.Deployment.dll" Guid="1a0fb270-3ac6-4951-a915-204ec8cc8a2f">
+			  <File Id="System.Deployment.dll" Name="System.Deployment.dll" Source="$(var.SKCDLL_TargetDir)System.Deployment.dll" />
+			</Component>
+			<Component Id="Accessibility.dll" Guid="6f37b01a-5a62-4f3b-8374-2067f9b3ce94">
+			  <File Id="Accessibility.dll" Name="Accessibility.dll" Source="$(var.SKCDLL_TargetDir)Accessibility.dll" />
+			</Component>
+			<Component Id="System.Configuration.dll" Guid="41cbd1d2-8a8b-4b3d-9e47-2a7f42c92b77">
+			  <File Id="System.Configuration.dll" Name="System.Configuration.dll" Source="$(var.SKCDLL_TargetDir)System.Configuration.dll" />
+			</Component>
+			<Component Id="System.Security.dll" Guid="0a49d0a4-03fe-4a5d-a346-e51300109bef">
+			  <File Id="System.Security.dll" Name="System.Security.dll" Source="$(var.SKCDLL_TargetDir)System.Security.dll" />
+			</Component>
+			<Component Id="System.Windows.Forms.dll" Guid="de35b518-2d03-4d13-bec7-f99e8bffbc6d">
+			  <File Id="System.Windows.Forms.dll" Name="System.Windows.Forms.dll" Source="$(var.SKCDLL_TargetDir)System.Windows.Forms.dll" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="Pictures_files" Directory="Pictures">          
+      <Component Id="Pictures_ExcelLogoSmall.scale_180.png" Guid="1d92ddc5-7d98-4784-8ccc-37b96ab33155">
+        <File Id="Pictures_ExcelLogoSmall.scale_180.png" Name="ExcelLogoSmall.scale-180.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\ExcelLogoSmall.scale-180.png" />
+      </Component>
+      <Component Id="Pictures_ExcelLogoSmall.scale_80.png" Guid="063a302b-018a-4d7d-9cfc-6b864d48a8d2">
+        <File Id="Pictures_ExcelLogoSmall.scale_80.png" Name="ExcelLogoSmall.scale-80.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\ExcelLogoSmall.scale-80.png" />
+      </Component>
+      <Component Id="Pictures_Information_icon.png" Guid="7b7a2a80-4337-43aa-842e-a0d36a6a9644">
+        <File Id="Pictures_Information_icon.png" Name="Information_icon.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\Information_icon.png" />
+      </Component>
+      <Component Id="Pictures_Refresh.png" Guid="7045339e-d7d8-4d0d-81b0-33862dc94fe2">
+        <File Id="Pictures_Refresh.png" Name="Refresh.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\Refresh.png" />
+      </Component>
+      <Component Id="Pictures_RefreshSkliert.png" Guid="6cb09cd3-d79c-4e94-ab72-42f6c566bdd7">
+        <File Id="Pictures_RefreshSkliert.png" Name="RefreshSkliert.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\RefreshSkliert.png" />
+      </Component>
+      <Component Id="Pictures_skc_logo_4u5_icon.ico" Guid="0c9ac524-52c7-4635-b733-3dac9a8165bc">
+        <File Id="Pictures_skc_logo_4u5_icon.ico" Name="skc_logo_4u5_icon.ico" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\skc_logo_4u5_icon.ico" />
+      </Component>
+      <Component Id="Pictures_62468617_reset_icon_internet_button_on_white_background_.jpg" Guid="a2dbfd9b-7acf-4c33-a7c1-a8ac72f6ea2e">
+        <File Id="Pictures_62468617_reset_icon_internet_button_on_white_background_.jpg" Name="62468617-reset-icon-internet-button-on-white-background-.jpg" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\62468617-reset-icon-internet-button-on-white-background-.jpg" />
+      </Component>
+      <Component Id="Pictures_view.jpg" Guid="7cf429a9-3206-4aad-b7e2-c9fbaa11dd45">
+        <File Id="Pictures_view.jpg" Name="view.jpg" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\view.jpg" />
+      </Component>
+      <Component Id="Pictures_Rotes_Kreuz_skaliert.png" Guid="268f1240-0972-48e0-83c0-7ac1c84b5559">
+        <File Id="Pictures_Rotes_Kreuz_skaliert.png" Name="Rotes_Kreuz_skaliert.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\Rotes_Kreuz_skaliert.png" />
+      </Component>
+      <Component Id="Pictures_Rotes_Kreuz_skaliert.jpeg" Guid="01405516-80dc-439c-b64d-9dbbbb0bc4bb">
+        <File Id="Pictures_Rotes_Kreuz_skaliert.jpeg" Name="Rotes_Kreuz_skaliert.jpeg" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\Rotes_Kreuz_skaliert.jpeg" />
+      </Component>
+      <Component Id="Pictures_reset_icon.png" Guid="e1bd988f-a3d5-4559-a4d5-2d05952a9516">
+        <File Id="Pictures_reset_icon.png" Name="reset_icon.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\reset_icon.png" />
+      </Component>
+      <Component Id="Pictures_reset_icon_svg_by_vexels.png" Guid="4a0b6089-b7e2-422a-ae40-e7c1bbb1c120">
+        <File Id="Pictures_reset_icon_svg_by_vexels.png" Name="reset-icon-svg-by-vexels.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\reset-icon-svg-by-vexels.png" />
+      </Component>
+      <Component Id="Pictures_printer_icon2.png" Guid="55bed511-4432-44db-98d0-08d3c54fbaa0">
+        <File Id="Pictures_printer_icon2.png" Name="printer-icon2.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\printer-icon2.png" />
+      </Component>
+      <Component Id="Pictures_logging.png" Guid="f74eefa0-af64-4d91-8ddb-4a8c641b00c8">
+        <File Id="Pictures_logging.png" Name="logging.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\logging.png" />
+      </Component>
+      <Component Id="Pictures_Hardware_Laser_Printer_icon.png" Guid="493bfc80-e0b4-4f9a-a041-ab2eb2ae0fa2">
+        <File Id="Pictures_Hardware_Laser_Printer_icon.png" Name="Hardware-Laser-Printer-icon.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\Hardware-Laser-Printer-icon.png" />
+      </Component>
+      <Component Id="Pictures_printer_icon1.png" Guid="7d9c3513-ce0d-4ce8-a46f-da48ec37b825">
+        <File Id="Pictures_printer_icon1.png" Name="printer-icon1.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\printer-icon1.png" />
+      </Component>
+      <Component Id="Pictures_green_check_icon_png_7_80x80.jpg" Guid="05588ad5-0717-4819-a80c-55f6ca19eb1d">
+        <File Id="Pictures_green_check_icon_png_7_80x80.jpg" Name="green-check-icon-png-7_80x80.jpg" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\green-check-icon-png-7_80x80.jpg" />
+      </Component>
+      <Component Id="Pictures_button_31199_960_720.png" Guid="2a94fefe-02db-41bf-94fc-54a067139aa4">
+        <File Id="Pictures_button_31199_960_720.png" Name="button-31199_960_720.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\button-31199_960_720.png" />
+      </Component>
+      <Component Id="Pictures_check_mark__40x40.png" Guid="571b2464-7133-4f03-9933-3f6606960b8c">
+        <File Id="Pictures_check_mark__40x40.png" Name="check-mark-_40x40.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\check-mark-_40x40.png" />
+      </Component>
+      <Component Id="Pictures_check_mark__45x45.png" Guid="3dcaa7c4-1032-4492-a187-ba239dff72b5">
+        <File Id="Pictures_check_mark__45x45.png" Name="check-mark-_45x45.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\check-mark-_45x45.png" />
+      </Component>
+      <Component Id="Pictures_gruener_Punkt_mit_Haken.png" Guid="2a292f69-19d1-444a-9f76-2ff34da61e4b">
+        <File Id="Pictures_gruener_Punkt_mit_Haken.png" Name="gruener-Punkt-mit-Haken.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\gruener-Punkt-mit-Haken.png" />
+      </Component>
+      <Component Id="Pictures_check_mark__50x50.png" Guid="6de6e9f3-ec15-49ac-89dc-97e8f961ab14">
+        <File Id="Pictures_check_mark__50x50.png" Name="check-mark-_50x50.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\check-mark-_50x50.png" />
+      </Component>
+      <Component Id="Pictures_ExcelLogoSmall.scale_80_zugeschnitten.png" Guid="bfc68a2d-3ba8-4132-b7fb-1f6e5203be7f">
+        <File Id="Pictures_ExcelLogoSmall.scale_80_zugeschnitten.png" Name="ExcelLogoSmall.scale-80_zugeschnitten.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\ExcelLogoSmall.scale-80_zugeschnitten.png" />
+      </Component>
+      <Component Id="Pictures_Actions_window_close_icon.png" Guid="10c2e8b7-f975-4928-8ae8-22ca6eb9d5ef">
+        <File Id="Pictures_Actions_window_close_icon.png" Name="Actions-window-close-icon.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\Actions-window-close-icon.png" />
+      </Component>
+      <Component Id="Pictures_icon_kopieren.png" Guid="5333d4ed-c707-4c3a-8ae4-3228eba98c2e">
+        <File Id="Pictures_icon_kopieren.png" Name="icon_kopieren.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\icon_kopieren.png" />
+      </Component>
+      <Component Id="Pictures_gruener_Punkt_mit_Haken_skaliert.jpeg" Guid="7e6678d5-8e3d-4830-a78f-dc737566b20f">
+        <File Id="Pictures_gruener_Punkt_mit_Haken_skaliert.jpeg" Name="gruener-Punkt-mit-Haken_skaliert.jpeg" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\gruener-Punkt-mit-Haken_skaliert.jpeg" />
+      </Component>
+      <Component Id="Pictures_Windows_Explorer_Logo.png" Guid="cb0d31c9-bf6b-404a-9413-b4a38c243107">
+        <File Id="Pictures_Windows_Explorer_Logo.png" Name="Windows-Explorer-Logo.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\Windows-Explorer-Logo.png" />
+      </Component>
+      <Component Id="Pictures_close_resized.png" Guid="e92d0bc2-1d19-43b8-9581-7cd249ece231">
+        <File Id="Pictures_close_resized.png" Name="close-resized.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\close-resized.png" />
+      </Component>
+      <Component Id="Pictures_icons8_save_25.png" Guid="295f87c8-fccd-4f46-be78-a9dca679261f">
+        <File Id="Pictures_icons8_save_25.png" Name="icons8-save-25.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\icons8-save-25.png" />
+      </Component>
+      <Component Id="Pictures_icons8_save_48.png" Guid="efd1bf7e-9eda-4c43-b372-9b0d151deaa8">
+        <File Id="Pictures_icons8_save_48.png" Name="icons8-save-48.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\icons8-save-48.png" />
+      </Component>
+      <Component Id="Pictures_icons8_save_35.png" Guid="f14a37b7-ee20-4ec6-a842-ce99c2c75062">
+        <File Id="Pictures_icons8_save_35.png" Name="icons8-save-35.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\icons8-save-35.png" />
+      </Component>
+      <Component Id="Pictures_save_35.png" Guid="6db26385-ee9e-4165-adfe-e235b85d446c">
+        <File Id="Pictures_save_35.png" Name="save-35.png" Source="$(var.Ergebnisanzeige_TargetDir)Pictures\save-35.png" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="Ressourcen_files" Directory="Ressourcen">    
+      <Component Id="Ressourcen_Spielerliste.txt" Guid="2166bccc-5501-4ea2-b820-c23bf3952c44">
+        <File Id="Ressourcen_Spielerliste.txt" Name="Spielerliste.txt" Source="$(var.Ergebnisanzeige_TargetDir)Ressourcen\Spielerliste.txt" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
