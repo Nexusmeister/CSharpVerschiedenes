@@ -1,0 +1,11 @@
+F:\SKCSOURCES\LearningPath\BackupSecurity\bin\Debug\netcoreapp3.1\BackupSecurity.exe
+F:\SKCSOURCES\LearningPath\BackupSecurity\bin\Debug\netcoreapp3.1\BackupSecurity.deps.json
+F:\SKCSOURCES\LearningPath\BackupSecurity\bin\Debug\netcoreapp3.1\BackupSecurity.runtimeconfig.json
+F:\SKCSOURCES\LearningPath\BackupSecurity\bin\Debug\netcoreapp3.1\BackupSecurity.runtimeconfig.dev.json
+F:\SKCSOURCES\LearningPath\BackupSecurity\bin\Debug\netcoreapp3.1\BackupSecurity.dll
+F:\SKCSOURCES\LearningPath\BackupSecurity\bin\Debug\netcoreapp3.1\BackupSecurity.pdb
+F:\SKCSOURCES\LearningPath\BackupSecurity\obj\Debug\netcoreapp3.1\BackupSecurity.AssemblyInfoInputs.cache
+F:\SKCSOURCES\LearningPath\BackupSecurity\obj\Debug\netcoreapp3.1\BackupSecurity.AssemblyInfo.cs
+F:\SKCSOURCES\LearningPath\BackupSecurity\obj\Debug\netcoreapp3.1\BackupSecurity.dll
+F:\SKCSOURCES\LearningPath\BackupSecurity\obj\Debug\netcoreapp3.1\BackupSecurity.pdb
+F:\SKCSOURCES\LearningPath\BackupSecurity\obj\Debug\netcoreapp3.1\BackupSecurity.csprojAssemblyReference.cache
