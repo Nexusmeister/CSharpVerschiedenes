@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:WIMS.Viewmodels.Module.Beacons;assembly=WIMS.Viewmodels"
+             mc:Ignorable="d"
+             x:Class="WIMS.Views.Masken.WISVisitorInformation.BeaconDetailView">
+
+    <ContentPage.BindingContext>
+        <vm:BeaconDetailViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--<RowDefinition Height="Auto"></RowDefinition>-->
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--<Image Source="{Binding Beacon.Picture}" Grid.ColumnSpan="2" Grid.Row="0"/>-->
+        <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Name" />
+        <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Text="Text" />
+        <Label Grid.Column="1" Grid.Row="0" Text="{Binding Beacon.Uuid}" IsEnabled="False" TextColor="Black"/>
+        <Label Grid.Column="1" Grid.Row="2" Text="Hier könnte etwas stehen" IsEnabled="False" TextColor="Black"/>
+    </Grid>
+</ContentPage>

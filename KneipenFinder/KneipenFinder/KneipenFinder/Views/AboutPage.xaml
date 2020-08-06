@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KneipenFinder.Views.AboutPage"
+             xmlns:vm="clr-namespace:KneipenFinder.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Secondary">#e2001a</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,0,0,0" VerticalOptions="FillAndExpand">
+                    <!--<Image Source="Kneipe.jpg" VerticalOptions="Center" HeightRequest="64" />-->
+                    <!--<Image Source="Kneipe.jpg"/>-->
+                    <Image Source="Kneipe.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="300"/>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="10,5,5,10" Spacing="10">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="KneipenFinder" FontAttributes="Bold" FontSize="22" />
+                                <Span Text=" " />
+                                <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="by Robin Kaltenbach, Steffen Meinke, Viktor Ziegler, Julian Geißendörfer und Dominik Eichhorn" FontAttributes="Bold" />
+                                <Span Text="." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="10">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Bildnachweis: (C) Dirk Knofe | Quelle: https://reportage.lvz.de/kneipe/"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Plattformübergreifend auf " />
+                                <Span Text="iOS und Android" FontAttributes="Bold" />
+                                <Span Text="." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Margin="0,10,0,0" Text="KneipenFinder Homepage"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Secondary}"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+
+                <!--<Button Text="Teste Alert"
+                        Clicked="Button_OnClicked"/>-->
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+    
+</ContentPage>

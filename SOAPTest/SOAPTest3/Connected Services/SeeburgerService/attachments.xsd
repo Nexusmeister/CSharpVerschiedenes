@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://uri.seeburger.com/bisas/message/schema" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://uri.seeburger.com/bisas/message/schema" jxb:extensionBindingPrefixes="xjc" jxb:version="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="AttachmentRef" type="AttachmentRefType" />
+  <xsd:complexType name="AttachmentRefType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="objectInfo">
+        <xsd:complexType>
+          <xsd:attribute name="type" type="xsd:string" use="optional" />
+          <xsd:attribute name="location" type="xsd:string" use="optional" />
+          <xsd:attribute name="size" type="xsd:unsignedLong" use="optional" />
+          <xsd:attribute name="charset" type="xsd:string" use="optional" />
+          <xsd:attribute name="creation" type="xsd:dateTime" use="optional" />
+          <xsd:attribute name="urn" type="xsd:string" use="optional" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="analyse">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>optional analyse info provided as a DOM structure</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:any namespace="##any" processContents="skip" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="refID" type="xsd:string" use="required" />
+  </xsd:complexType>
+</xsd:schema>
