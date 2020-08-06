@@ -1,0 +1,163 @@
+﻿<Window x:Class="TLWindowsEditorWPFDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Neodynamic ThermalLabel Editor for Windows 9.0" Height="582" Width="765" xmlns:my="clr-namespace:Neodynamic.Windows.WPF.ThermalLabelEditor;assembly=Neodynamic.Windows.ThermalLabelEditor" Loaded="Window_Loaded" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" WindowState="Maximized">
+    
+    <Window.Resources>
+        <Style TargetType="{x:Type Image}" x:Key="toolbarImageStyle">
+            <Style.Triggers>
+                <DataTrigger 
+                    Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type Button}, 
+                    AncestorLevel=1}, Path=IsEnabled}" Value="False">
+                    <Setter Property="Opacity" Value="0.3"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="44" />
+            <RowDefinition Height="286*" />
+            <RowDefinition Height="32" />
+        </Grid.RowDefinitions>
+        <Menu IsMainMenu="True">            
+            <MenuItem Header="_File" >
+                <MenuItem Header="_New" Name="menuNew" Click="menuNew_Click"></MenuItem>
+                <MenuItem Header="_Open" Name="menuOpen" Click="menuOpen_Click"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="_Save" Name="menuSave" Click="menuSave_Click"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Label Setup" Name="menuLabelSetup" Click="menuLabelSetup_Click"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Print..." Name="menuPrint" Click="menuPrint_Click"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Export to PDF" Name="menuPdf" Click="menuPdf_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edit" >
+                <MenuItem Header="Undo" Name="menuUndo" Command="my:EditorCommands.Undo" CommandTarget="{Binding ElementName=thermalLabelEditor1}" ></MenuItem>
+                <MenuItem Header="Redo" Name="menuRedo" Command="my:EditorCommands.Redo" CommandTarget="{Binding ElementName=thermalLabelEditor1}"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Cut" Name="menuCut" Command="my:EditorCommands.Cut" CommandTarget="{Binding ElementName=thermalLabelEditor1}"></MenuItem>
+                <MenuItem Header="Copy" Name="menuCopy" Command="my:EditorCommands.Copy" CommandTarget="{Binding ElementName=thermalLabelEditor1}" ></MenuItem>
+                <MenuItem Header="Paste" Name="menuPaste" Command="my:EditorCommands.Paste" CommandTarget="{Binding ElementName=thermalLabelEditor1}"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Select All" Name="menuSelAll" Command="my:EditorCommands.SelectAll" CommandTarget="{Binding ElementName=thermalLabelEditor1}" ></MenuItem>
+                <MenuItem Header="Delete All" Name="menuDelAll" Command="my:EditorCommands.DeleteAll" CommandTarget="{Binding ElementName=thermalLabelEditor1}" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Arrange" >
+                <MenuItem Header="Bring Forward" Name="menuBringForward" Command="my:EditorCommands.BringForward" CommandTarget="{Binding ElementName=thermalLabelEditor1}" ></MenuItem>
+                <MenuItem Header="Send Backward" Name="menuSendBackward" Command="my:EditorCommands.SendBackward" CommandTarget="{Binding ElementName=thermalLabelEditor1}"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Bring to Front" Name="menuBringToFront" Command="my:EditorCommands.BringToFront" CommandTarget="{Binding ElementName=thermalLabelEditor1}"></MenuItem>
+                <MenuItem Header="Send to Back" Name="menuSendToBack" Command="my:EditorCommands.SendToBack" CommandTarget="{Binding ElementName=thermalLabelEditor1}" ></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Lock Selected Items" Name="menuLockItems" Command="my:EditorCommands.LockSelectedItems" CommandTarget="{Binding ElementName=thermalLabelEditor1}" ></MenuItem>
+                <MenuItem Header="Unlock Selected Items" Name="menuUnlockItems" Command="my:EditorCommands.UnlockSelectedItems" CommandTarget="{Binding ElementName=thermalLabelEditor1}" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_View">
+                <MenuItem Header="Options" Name="menuOptions" Click="menuOptions_Click" ></MenuItem>
+                <MenuItem Header="Properties" Name="menuProperties" Click="cmFormat_Click" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Tools">
+                <MenuItem Header="Upload TTF to Printer Storage" Name="menuUploadTTFToPrinterStorage" Click="menuUploadTTFToPrinterStorage_Click" ></MenuItem>
+                <MenuItem Header="Manage Fonts in Printer Storage" Name="menuManageFontsInPrinterStorage" Click="menuManageFontsInPrinterStorage_Click" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="About" Name="menuAbout" Click="menuAbout_Click" ></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1" >
+            <Button Name="tbbNew" Click="menuNew_Click" >
+                <Image  Width="32" Height="32" Source="Icons\newfile.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbOpen" Click="menuOpen_Click" >
+                <Image Width="32" Height="32" Source="Icons\open.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbSave" Click="menuSave_Click" >
+                <Image Width="32" Height="32" Source="Icons\save.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>            
+            <Separator Margin="10,0,10,0"></Separator>
+            <Button Name="tbbPrint" Click="menuPrint_Click" >
+                <Image Width="32" Height="32" Source="Icons\print.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Separator Margin="10,0,10,0"></Separator>
+            <Button Name="tbbCut" Command="my:EditorCommands.Cut" CommandTarget="{Binding ElementName=thermalLabelEditor1}">
+                <Image Width="32" Height="32" Source="Icons\cut.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbCopy" Command="my:EditorCommands.Copy" CommandTarget="{Binding ElementName=thermalLabelEditor1}">
+                <Image Width="32" Height="32" Source="Icons\copy.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbPaste" Command="my:EditorCommands.Paste" CommandTarget="{Binding ElementName=thermalLabelEditor1}">
+                <Image Width="32" Height="32" Source="Icons\paste.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Separator Margin="10,0,10,0"></Separator>
+            <Button Name="tbbUndo" Command="my:EditorCommands.Undo" CommandTarget="{Binding ElementName=thermalLabelEditor1}" >
+                <Image Width="32" Height="32" Source="Icons\undo.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbRedo" Command="my:EditorCommands.Redo" CommandTarget="{Binding ElementName=thermalLabelEditor1}">
+                <Image Width="32" Height="32" Source="Icons\redo.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Separator Margin="10,0,10,0"></Separator>
+            <Button Name="tbbPointer" Click="tbbPointer_Click">
+                <Image Width="32" Height="32" Source="Icons\pointer.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>            
+            <Button Name="tbbRect" Click="tbbRect_Click">
+                <Image Width="32" Height="32" Source="Icons\rect.png" Style="{StaticResource toolbarImageStyle}" />                
+            </Button>
+            <Button Name="tbbEllipse" Click="tbbEllipse_Click">
+                <Image Width="32" Height="32" Source="Icons\ellipse.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbLine" Click="tbbLine_Click">
+                <Image Width="32" Height="32" Source="Icons\line.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbText" Click="tbbText_Click">
+                <Image Width="32" Height="32" Source="Icons\text.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbImage" Click="tbbImage_Click">
+                <Image Width="32" Height="32" Source="Icons\picture.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbBarcode" Click="tbbBarcode_Click">
+                <Image Width="32" Height="32" Source="Icons\barcode.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Button Name="tbbRFID" Click="tbbRFID_Click">
+                <Image Width="32" Height="32" Source="Icons\RFIDTag.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Separator Margin="10,0,10,0"></Separator>
+            <Button Name="tbbProp" Click="cmFormat_Click">
+                <Image Width="32" Height="32" Source="Icons\properties.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Separator Margin="10,0,10,0"></Separator>
+            <Button Name="tbbZoom100" Click="tbbZoom100_Click">
+                <Image Width="32" Height="32" Source="Icons\Zoom100.png" Style="{StaticResource toolbarImageStyle}" SnapsToDevicePixels="True" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </Button>
+            <Slider Name="sldZoom" Minimum="10" Maximum="1000" IsSnapToTickEnabled="True" TickFrequency="1" Width="150" Value="{Binding ElementName=thermalLabelEditor1, Path=Zoom}" VerticalAlignment="Center"></Slider>
+        </ToolBar>
+        <my:ThermalLabelEditor Grid.Row="2"  HorizontalAlignment="Stretch"  Name="thermalLabelEditor1" VerticalAlignment="Stretch" SelectionChanged="thermalLabelEditor1_SelectionChanged"  SelectionAreaChanged="thermalLabelEditor1_SelectionAreaChanged" CurrentSelectionBeforeDelete="thermalLabelEditor1_CurrentSelectionBeforeDelete">
+            <my:ThermalLabelEditor.ContextMenu>
+                <ContextMenu Name="editorContextMenu" Opened="editorContextMenu_Opened" >
+                    <MenuItem Name="cmCut" Header="Cut" Command="my:EditorCommands.Cut" CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                    <MenuItem Name="cmCopy" Header="Copy"  Command="my:EditorCommands.Copy" CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                    <MenuItem Name="cmPaste" Header="Paste"  Command="my:EditorCommands.Paste" CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource AncestorType=ContextMenu}}"/>
+                    <Separator Name="Sep1"></Separator>
+                    <MenuItem Name="cmFont" Header="Font..." Click="cmFont_Click" />
+                    <Separator Name="Sep2"></Separator>
+                    <MenuItem Name="cmOrder" Header="Order">
+                        <MenuItem Name="cmBringToFront" Header="Bring to Front" Command="my:EditorCommands.BringToFront" CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                        <MenuItem Name="cmSendToBack" Header="Send to Back" Command="my:EditorCommands.SendToBack" CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                        <MenuItem Name="cmBringForward" Header="Bring Forward" Command="my:EditorCommands.BringForward" CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                        <MenuItem Name="cmSendBackward" Header="Send Backward" Command="my:EditorCommands.SendBackward" CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                    </MenuItem>
+                    <Separator Name="Sep3"></Separator>
+                    <MenuItem Name="cmFormat" Header="Format..." Click="cmFormat_Click" />
+                    <Separator Name="Sep4"></Separator>
+                    <MenuItem Name="cmExpression" Header="Expression..." Click="CmExpression_Click" />
+                </ContextMenu>
+            </my:ThermalLabelEditor.ContextMenu>
+        </my:ThermalLabelEditor>
+        <ToolBar Grid.Row="3" >
+            <TextBlock Name="txtSelectionInfo" Margin="30,0,0,0"></TextBlock>            
+        </ToolBar>
+    </Grid>
+</Window>

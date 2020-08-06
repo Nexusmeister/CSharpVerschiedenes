@@ -1,0 +1,10 @@
+﻿<Window x:Class="TLWindowsEditorWPFDemo.FontDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Font" Height="432" Width="494" ResizeMode="NoResize" xmlns:my="clr-namespace:TLWindowsEditorWPFDemo" WindowStyle="ToolWindow" ShowInTaskbar="True" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <my:FontUC HorizontalAlignment="Left" x:Name="fontUC1" VerticalAlignment="Top" Height="343" Width="472" />
+        <Button Content="OK" IsDefault="True" Height="23" HorizontalAlignment="Left" Margin="254,358,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <Button Content="Cancel" IsCancel="True" Height="23" HorizontalAlignment="Left" Margin="370,358,0,0" Name="button2" VerticalAlignment="Top" Width="75" />
+    </Grid>
+</Window>

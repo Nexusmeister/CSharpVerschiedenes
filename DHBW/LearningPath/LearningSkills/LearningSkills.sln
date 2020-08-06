@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSkills", "LearningSkills.csproj", "{D3A7FBA6-EE4F-4315-B349-9C8A97CE8FE9}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LearningDatabaseDAT", "LearningDatabaseDAT\LearningDatabaseDAT.sqlproj", "{06464945-3BCB-441F-ACFF-D50A427C1F25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermarket.API", "..\SupermarketAPI\Supermarket.API.csproj", "{7FE0B9A8-868E-4D77-A31A-1A87AB915ADC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Deployment|Any CPU = Deployment|Any CPU
+		Entwickleer|Any CPU = Entwickleer|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3A7FBA6-EE4F-4315-B349-9C8A97CE8FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A7FBA6-EE4F-4315-B349-9C8A97CE8FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A7FBA6-EE4F-4315-B349-9C8A97CE8FE9}.Deployment|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A7FBA6-EE4F-4315-B349-9C8A97CE8FE9}.Deployment|Any CPU.Build.0 = Debug|Any CPU
+		{D3A7FBA6-EE4F-4315-B349-9C8A97CE8FE9}.Entwickleer|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A7FBA6-EE4F-4315-B349-9C8A97CE8FE9}.Entwickleer|Any CPU.Build.0 = Release|Any CPU
+		{D3A7FBA6-EE4F-4315-B349-9C8A97CE8FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A7FBA6-EE4F-4315-B349-9C8A97CE8FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Deployment|Any CPU.ActiveCfg = Debug|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Deployment|Any CPU.Build.0 = Debug|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Deployment|Any CPU.Deploy.0 = Debug|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Entwickleer|Any CPU.ActiveCfg = Release|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Entwickleer|Any CPU.Build.0 = Release|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Entwickleer|Any CPU.Deploy.0 = Release|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06464945-3BCB-441F-ACFF-D50A427C1F25}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7FE0B9A8-868E-4D77-A31A-1A87AB915ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE0B9A8-868E-4D77-A31A-1A87AB915ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE0B9A8-868E-4D77-A31A-1A87AB915ADC}.Deployment|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE0B9A8-868E-4D77-A31A-1A87AB915ADC}.Deployment|Any CPU.Build.0 = Debug|Any CPU
+		{7FE0B9A8-868E-4D77-A31A-1A87AB915ADC}.Entwickleer|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE0B9A8-868E-4D77-A31A-1A87AB915ADC}.Entwickleer|Any CPU.Build.0 = Debug|Any CPU
+		{7FE0B9A8-868E-4D77-A31A-1A87AB915ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE0B9A8-868E-4D77-A31A-1A87AB915ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5264E2BD-7CC2-4ACD-9D89-9EABC7BE403D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/robin0142
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LearningSkills.csproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = LearningDatabaseDAT\\LearningDatabaseDAT.sqlproj
+		SccProjectName2 = LearningDatabaseDAT
+		SccLocalPath2 = LearningDatabaseDAT
+		SccProjectUniqueName3 = ..\\SupermarketAPI\\Supermarket.API.csproj
+		SccProjectName3 = ../SupermarketAPI
+		SccLocalPath3 = ..\\SupermarketAPI
+	EndGlobalSection
+EndGlobal

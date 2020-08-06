@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KneipenFinder.Views.NeuesAngebotPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Abbrechen" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Speichern" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Text" FontSize="Medium" />
+            <Entry Text="{Binding Titel}" Placeholder="Angebotstitel (nicht erforderlich)" FontSize="Small" />
+            <Label Text="Description" FontSize="Medium" />
+            <Editor Text="{Binding SaleDescription}" Placeholder="Angebotsbeschreibung" FontSize="Small" Margin="0" />
+
+            <Label Text="{Binding ErrorString}" FontSize="20.0" TextColor="Red" HorizontalTextAlignment="Center" Margin="0,20,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

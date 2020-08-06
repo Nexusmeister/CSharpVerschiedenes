@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE5B6CC4-4CEB-4F8F-9F3B-EAA503C0A4A4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestProjectZurKlassenVerwaltung</RootNamespace>
+    <AssemblyName>TestProjectZurKlassenVerwaltung</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArtikelArray.cs" />
+    <Compile Include="BmiRechner.cs" />
+    <Compile Include="StringBuilden.cs" />
+    <Compile Include="DieDauerschleife.cs" />
+    <Compile Include="EntscheidungKühlschrank.cs" />
+    <Compile Include="MainKlasse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchuhgrößeErmitteln.cs" />
+    <Compile Include="Zähler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\0.1 Read.Line und Write.Line\ReadLineUndWriteLine.csproj">
+      <Project>{2c4373c0-d435-4558-b038-e44111c62100}</Project>
+      <Name>ReadLineUndWriteLine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3. for-Schleife\ForSchleife.csproj">
+      <Project>{0f3311bc-7abf-41c5-b475-1c5d7401d0a4}</Project>
+      <Name>ForSchleife</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3.1 while-Schleife\WhileSchleife.csproj">
+      <Project>{77e387e4-6b1c-481a-8560-576296cfd314}</Project>
+      <Name>WhileSchleife</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3.2\DoWhileSchleife.csproj">
+      <Project>{4d9828c7-5f88-429d-9a28-5789a208b183}</Project>
+      <Name>DoWhileSchleife</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3.4 Endlosschleife\Endlosschleife.csproj">
+      <Project>{8369c9de-b45b-461f-9c2c-46a523257a7f}</Project>
+      <Name>Endlosschleife</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\4. Array\EindimensionalesArray.csproj">
+      <Project>{f285164e-fb68-491a-ae3a-82ee684f40fb}</Project>
+      <Name>EindimensionalesArray</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\4.2 Mehrdimensionales Array\MehrdimensionalesArray.csproj">
+      <Project>{4cc38644-2c18-4259-bf8d-517f18dc2594}</Project>
+      <Name>MehrdimensionalesArray</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\5.1 Funktionen\Funktionen.csproj">
+      <Project>{aa8c05b1-4d9f-449f-a37c-6ffb9d93f155}</Project>
+      <Name>Funktionen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\5.4 Nullable Types\NullableTypes.csproj">
+      <Project>{c9e21a58-ead9-4eaa-8267-e5a5cb058a47}</Project>
+      <Name>NullableTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\6.1 Enumerationen\Enum1.csproj">
+      <Project>{5c5ca069-bde3-4cdb-8afd-5f9effb27c02}</Project>
+      <Name>Enum1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\6.1.1 Enum2\Enum2.csproj">
+      <Project>{592a6524-d75b-4cbf-93a0-29ee9fd27a72}</Project>
+      <Name>Enum2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7.1 Invert-Methode\Invert-Methode.csproj">
+      <Project>{f93acab5-e6d4-41a1-a919-88d353dc613b}</Project>
+      <Name>Invert-Methode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7.2 Referenz-Methode\Referenz-Methode.csproj">
+      <Project>{d3603a7d-9a66-40cb-87ac-cc64725a592a}</Project>
+      <Name>Referenz-Methode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7.4 Zaehlen-Methode\Zaehlen-Methode.csproj">
+      <Project>{68217853-3ee7-4ac7-a732-0a41c6f3f507}</Project>
+      <Name>Zaehlen-Methode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7.5 Try Parse\TryParse-Methode.csproj">
+      <Project>{1e4a10f2-78fd-47df-b8ff-ee9b78cfad92}</Project>
+      <Name>TryParse-Methode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7.6.1\Divide-MethodeBoolReturn.csproj">
+      <Project>{ba2d779d-fff9-435e-beba-a46e50638d25}</Project>
+      <Name>Divide-MethodeBoolReturn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7.7 Swap-Methode\Swap-Methode.csproj">
+      <Project>{2b1ca8d5-7a4e-433c-94ea-f47e4b8787ea}</Project>
+      <Name>Swap-Methode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7.8 BMI-Calc\BMI-Calc.csproj">
+      <Project>{d614b45d-80c8-4604-8dfb-fb9ce26c7054}</Project>
+      <Name>BMI-Calc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7.8 Divide-Overload-Methode\Divide-MethodeOverloadDoubleReturn.csproj">
+      <Project>{a09649b9-ac5e-4d93-ae21-f45ac48629f8}</Project>
+      <Name>Divide-MethodeOverloadDoubleReturn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\8.1 Klasse\8.1 Creating Class + Defining Attributes.csproj">
+      <Project>{9e497533-7490-4271-ab41-952cfc0cc314}</Project>
+      <Name>8.1 Creating Class + Defining Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\8.2 Steptracker Programm\8.2 Steptracker Programm.csproj">
+      <Project>{a8f9928a-21a4-476c-99b1-5b5a111fc572}</Project>
+      <Name>8.2 Steptracker Programm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\8.3 Konstruktor und Destruktor\8.3 Konstruktor und Destruktor.csproj">
+      <Project>{aea73743-5527-4f7b-b93c-628d6ede42b3}</Project>
+      <Name>8.3 Konstruktor und Destruktor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\8.3.1 Verschiedene Konstruktoren\8.3.1 Verschiedene Konstruktoren.csproj">
+      <Project>{04bc6bd6-1a7e-45ac-9c42-0dbdd0cf70ac}</Project>
+      <Name>8.3.1 Verschiedene Konstruktoren</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9. Vererbung\Vererbung.csproj">
+      <Project>{3392312e-47d4-46a0-a8b5-3b300e1b1afa}</Project>
+      <Name>Vererbung</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abstract\AbstractKlasse.csproj">
+      <Project>{789e09dd-b55b-4072-9302-6d5883fc4765}</Project>
+      <Name>AbstractKlasse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Add-Methode\Add-Methode.csproj">
+      <Project>{35ae6786-e4d0-4b40-bd05-9c42cac34909}</Project>
+      <Name>Add-Methode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Divide-Methode\Divide-Methode.csproj">
+      <Project>{efdfa0c0-cdc7-4fbb-a399-31d3ee2c8ca6}</Project>
+      <Name>7.6 Divide-Methode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\foreach-Schleife\ForEachSchleife.csproj">
+      <Project>{730dce90-3fa1-45dd-94a8-aa719d42ef09}</Project>
+      <Name>ForEachSchleife</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\if-else 2\If-Else2.csproj">
+      <Project>{1f4c9f65-c231-4890-81f2-c6dbef4f3a6e}</Project>
+      <Name>If-Else2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterfaceExamp3\InterfaceExamp3.csproj">
+      <Project>{398e640a-9b5a-4c45-b8e4-bcf780b4e41a}</Project>
+      <Name>InterfaceExamp3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\10.2 Interfaces.csproj">
+      <Project>{286f4610-d8b6-47fb-9f94-620976a0fe71}</Project>
+      <Name>10.2 Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Klimaanlage\Klimaanlagen.csproj">
+      <Project>{cf4f4445-2519-4a4b-bf94-464992e178ce}</Project>
+      <Name>Klimaanlagen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project 2\If-Else1.csproj">
+      <Project>{8b5ee0ec-0d0f-4738-80aa-6a46c0e90383}</Project>
+      <Name>If-Else1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StringBuilder\StringBuilder.csproj">
+      <Project>{6e93196d-8aeb-4f12-bfb7-97ac62fecf3d}</Project>
+      <Name>StringBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Switch\Switch.csproj">
+      <Project>{03afd058-8dfa-4eb9-84c2-c7d4f648a793}</Project>
+      <Name>Switch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZahlenErraten\ZahlenErraten.csproj">
+      <Project>{ae4a0b8d-f1b9-44dd-b2c0-70c765287603}</Project>
+      <Name>ZahlenErraten</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

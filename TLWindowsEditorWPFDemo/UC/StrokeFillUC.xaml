@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="TLWindowsEditorWPFDemo.StrokeFillUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TLWindowsEditorWPFDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="286" d:DesignWidth="532" Loaded="UserControl_Loaded">
+    <Grid>
+        <StackPanel>            
+            <GroupBox Header="Stroke" >
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal"  Height="24" VerticalAlignment="Top" Margin="10">
+                        <TextBlock Text="Color:" VerticalAlignment="Center" Margin="0,0,10,0"></TextBlock>
+                        <ComboBox Name="cboStrokeColor" Width="80"></ComboBox>
+                        <Button Name="cmdStrokeColorHex" Width="40" Background="Black" Margin="10,0,0,0" Click="cmdStrokeColorHex_Click"></Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"  Height="24" VerticalAlignment="Top" Margin="10">
+                        <TextBlock Text="Thickness:" VerticalAlignment="Center" Margin="0,0,10,0"></TextBlock>
+                        <TextBox Name="txtStrokeThickness" Width="80" my:TextBoxMaskBehavior.Mask="Decimal" my:TextBoxMaskBehavior.MinimumValue="0"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>            
+            <GroupBox Name="gbFill" Header="Fill" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal"  Height="24" VerticalAlignment="Top" Margin="10">
+                    <TextBlock Text="Color:" VerticalAlignment="Center" Margin="0,0,10,0"></TextBlock>
+                    <ComboBox Name="cboFillColor" Width="80"></ComboBox>
+                    <Button Name="cmdFillColorHex" Width="40" Background="Black" Margin="10,0,0,0" Click="CmdFillColorHex_Click"></Button>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Name="gbRoundedCorners" Header="Rounded Corners" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal" Margin="10" Height="24" VerticalAlignment="Top">
+                    <TextBlock Text="Corner Radius:" VerticalAlignment="Center" Margin="0,0,10,0" ></TextBlock>
+                    <TextBox Name="txtCornerRadius" Width="80" my:TextBoxMaskBehavior.Mask="Decimal" my:TextBoxMaskBehavior.MinimumValue="0"></TextBox>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>        
+    </Grid>
+</UserControl>

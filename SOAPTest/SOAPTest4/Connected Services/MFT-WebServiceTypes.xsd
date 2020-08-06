@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://uri.seeburger.com/bisas/schema/WebServiceMFT" xmlns:ns3="http://uri.seeburger.com/bisas/message/schema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://uri.seeburger.com/bisas/schema/WebServiceMFT">
+    <xsd:import namespace="http://uri.seeburger.com/bisas/message/schema" schemaLocation="attachments.xsd"/>
+    <xsd:element name="MailParams" type="MailParamsType"/>
+    <xsd:element name="SeeFXParams" type="SeeFXParamsType"/>
+    <xsd:element name="FtpParams" type="FtpParamsType"/>
+    <xsd:element name="FilesElement" type="FilesType"/>
+    <xsd:element name="Status" type="xsd:string"/>
+    <xsd:complexType name="MailParamsType">
+        <xsd:sequence>
+            <xsd:element name="recipients" type="recipientListType"/>
+            <xsd:element name="subject" type="xsd:string"/>
+            <xsd:element name="body" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="SeeFXParamsType">
+        <xsd:sequence>
+            <xsd:element name="amountDownloads" type="xsd:int"/>
+            <xsd:element name="durationDays" type="xsd:int"/>
+            <xsd:element name="passwordProtection" type="xsd:boolean"/>
+            <xsd:element name="locale" type="LocaleType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="LocaleType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="de"/>
+            <xsd:enumeration value="en"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="recipientListType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="recipient" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FtpParamsType">
+        <xsd:sequence>
+            <xsd:element name="URL" type="xsd:string"/>
+            <xsd:element name="Port" type="xsd:int"/>
+            <xsd:element name="Type" type="ftpModeType"/>
+            <xsd:element name="User" type="xsd:string"/>
+            <xsd:element name="Password" type="xsd:string"/>
+            <xsd:element name="Path" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="ftpModeType">
+        <xsd:restriction base="xsd:NCName">
+            <xsd:enumeration value="ACTIVE"/>
+            <xsd:enumeration value="PASSIVE"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="FilesType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="filename" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="ErrorElement" type="ErrorType"/>
+    <xsd:complexType name="ErrorType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="ErrorDetailsElement" type="ErrorDetailsType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ErrorDetailsType">
+        <xsd:sequence>
+            <xsd:element name="errorInfo" type="xsd:string"/>
+            <xsd:element name="errorFilename" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FileListType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="file" type="FileListEntryType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FileListEntryType">
+        <xsd:sequence>
+            <xsd:element name="fileName" type="xsd:string"/>
+            <xsd:element name="fileRef" type="ns3:AttachmentRefType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

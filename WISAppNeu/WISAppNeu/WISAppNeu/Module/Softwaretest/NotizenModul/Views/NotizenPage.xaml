@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WuerthIndustryMobileServices.Module.Softwaretest.NotizenModul.Views.NotizenPage">
+
+<ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Text="{Binding Item.Text}" 
+                   Placeholder="Bitte geben Sie etwas ein." 
+                   FontSize="Small"/>
+            <Button Text="Test Button"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="StartAndExpand"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    Clicked="Button_OnClicked"/>
+        </StackLayout>
+</ContentPage.Content>
+</ContentPage>
