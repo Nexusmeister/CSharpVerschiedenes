@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KneipenFinder.Views.SettingsPage"
+             xmlns:vm="clr-namespace:KneipenFinder.ViewModels">
+
+    <ContentPage.Content>
+        <StackLayout x:Name="Layout">
+            <Label Text="Standard-Radius" 
+                   Margin="4,0,0,-15"
+                   FontSize="16"/>
+            <Entry Placeholder="Radius"
+                   Margin="0, 0, 0, 0"
+                   x:Name="TxtRadius"
+                   Text="{Binding StandardRadius}"/>
+            <Button Text="Dark Mode" Clicked="Button_OnClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

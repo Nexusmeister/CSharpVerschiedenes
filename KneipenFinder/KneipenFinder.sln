@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KneipenFinder.Android", "KneipenFinder\KneipenFinder.Android\KneipenFinder.Android.csproj", "{3A43E663-0BBF-4047-9458-86FC8F35F32F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KneipenFinder.iOS", "KneipenFinder\KneipenFinder.iOS\KneipenFinder.iOS.csproj", "{F3B53EA0-3C9F-449E-8B0D-7116345389FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KneipenFinder", "KneipenFinder\KneipenFinder\KneipenFinder.csproj", "{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|Any CPU = Release|Any CPU
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Debug|iPhone.Deploy.0 = Debug|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Release|iPhone.Build.0 = Release|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Release|iPhone.Deploy.0 = Release|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{3A43E663-0BBF-4047-9458-86FC8F35F32F}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Debug|iPhone.Build.0 = Debug|iPhone
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Debug|iPhone.Deploy.0 = Debug|iPhone
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Debug|iPhoneSimulator.Deploy.0 = Debug|iPhoneSimulator
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Release|Any CPU.Build.0 = Release|iPhone
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Release|Any CPU.Deploy.0 = Release|iPhone
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Release|iPhone.ActiveCfg = Release|iPhone
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Release|iPhone.Build.0 = Release|iPhone
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Release|iPhone.Deploy.0 = Release|iPhone
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{F3B53EA0-3C9F-449E-8B0D-7116345389FC}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Debug|iPhone.Deploy.0 = Debug|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Release|iPhone.Build.0 = Release|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Release|iPhone.Deploy.0 = Release|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{E1C88392-3C04-4D9A-A6FC-73B66B02B7E5}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF68601D-E73C-4F79-867B-19DDBF74D0A9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/robin0142
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = KneipenFinder\\KneipenFinder.Android\\KneipenFinder.Android.csproj
+		SccProjectName1 = KneipenFinder/KneipenFinder.Android
+		SccLocalPath1 = KneipenFinder\\KneipenFinder.Android
+		SccProjectUniqueName2 = KneipenFinder\\KneipenFinder.iOS\\KneipenFinder.iOS.csproj
+		SccProjectName2 = KneipenFinder/KneipenFinder.iOS
+		SccLocalPath2 = KneipenFinder\\KneipenFinder.iOS
+		SccProjectUniqueName3 = KneipenFinder\\KneipenFinder\\KneipenFinder.csproj
+		SccProjectName3 = KneipenFinder/KneipenFinder
+		SccLocalPath3 = KneipenFinder\\KneipenFinder
+	EndGlobalSection
+EndGlobal

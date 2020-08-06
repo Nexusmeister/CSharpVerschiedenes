@@ -1,0 +1,24 @@
+﻿<Window x:Class="MitgliederClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MitgliederClient"
+        mc:Ignorable="d"
+        Title="Mitglieder Client v" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="gridMainWindow" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="Name" ToolTip="Name Mitglied"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid x:Name="gridMitglieder" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID"/>
+                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Name"/>
+                    <!--<DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Vorname"/>-->
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bf920a93-762e-4fba-a1eb-840c3f25d8cc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="D:\Development\SOAP\MFT-WebServiceMFTPort\MFT-WebServiceMFTPort.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MFT-WebServiceMFTPort.wsdl" MetadataType="Wsdl" ID="5cc696fb-5289-4b89-ae9f-47d7bc312017" SourceId="1" SourceUrl="file:///D:/Development/SOAP/MFT-WebServiceMFTPort/MFT-WebServiceMFTPort.wsdl" />
+    <MetadataFile FileName="attachments.xsd" MetadataType="Schema" ID="59851534-afda-46e6-805f-c04e05698c24" SourceId="1" SourceUrl="file:///D:/Development/SOAP/MFT-WebServiceMFTPort/attachments.xsd" />
+    <MetadataFile FileName="MFT-WebServiceTypes.xsd" MetadataType="Schema" ID="13f8692c-aa57-4659-9154-0eeb7bdda8e2" SourceId="1" SourceUrl="file:///D:/Development/SOAP/MFT-WebServiceMFTPort/MFT-WebServiceTypes.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

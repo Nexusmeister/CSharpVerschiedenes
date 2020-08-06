@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="05d397ca-1a3b-45fa-b838-78fd815daed6" activeEnvironment="Default" name="KundenEdiTest" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c15e4b7f-b05e-442c-8a6f-93dedfbbf8ef" wsaVersion="NONE" name="SoapBinding" type="wsdl" bindingName="{http://uri.seeburger.com/bisas/interfaces/WebServiceMFT}SoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/pa047373/Downloads/MFT-WebServiceMFTPort/MFT-WebServiceMFTPort.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\pa047373\Downloads\MFT-WebServiceMFTPort\MFT-WebServiceMFTPort.wsdl"><con:part><con:url>file:\C:\Users\pa047373\Downloads\MFT-WebServiceMFTPort\MFT-WebServiceMFTPort.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT" xmlns:ns2="http://uri.seeburger.com/bisas/schema/WebServiceMFT" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT" xmlns="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT">
+      <xsd:import namespace="http://uri.seeburger.com/bisas/schema/WebServiceMFT" schemaLocation="MFT-WebServiceTypes.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="WebServiceToFtpOut">
+    <wsdl:part element="ns2:Status" name="Status"></wsdl:part>
+    <wsdl:part element="ns2:FilesElement" name="Files"></wsdl:part>
+    <wsdl:part element="ns2:ErrorElement" name="error"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WebServiceToMailIn">
+    <wsdl:part element="ns2:FilesElement" name="Files"></wsdl:part>
+    <wsdl:part element="ns2:MailParams" name="MailParams"></wsdl:part>
+    <wsdl:part element="ns2:SeeFXParams" name="SeeFXParams"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WebServiceToFtpIn">
+    <wsdl:part element="ns2:FilesElement" name="Files"></wsdl:part>
+    <wsdl:part element="ns2:FtpParams" name="FtpParams"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WebServiceToMailOut">
+    <wsdl:part element="ns2:Status" name="Status"></wsdl:part>
+    <wsdl:part element="ns2:FilesElement" name="Files"></wsdl:part>
+    <wsdl:part element="ns2:ErrorElement" name="error"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MFT-WebServiceMFTPortType">
+    <wsdl:operation name="WebServiceToFtp">
+      <wsdl:documentation>
+        <pddoc:processDesignerOperationDoc type="Invoke" xmlns:pddoc="http://uri.seeburger.com/bisas/processDesigner/doc"/>
+      </wsdl:documentation>
+      <wsdl:input message="ns1:WebServiceToFtpIn"></wsdl:input>
+      <wsdl:output message="ns1:WebServiceToFtpOut"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebServiceToMail">
+      <wsdl:documentation>
+        <pddoc:processDesignerOperationDoc type="Invoke" xmlns:pddoc="http://uri.seeburger.com/bisas/processDesigner/doc"/>
+      </wsdl:documentation>
+      <wsdl:input message="ns1:WebServiceToMailIn"></wsdl:input>
+      <wsdl:output message="ns1:WebServiceToMailOut"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SoapBinding" type="ns1:MFT-WebServiceMFTPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference URI="#Policy-1" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsdl:operation name="WebServiceToFtp">
+      <soap:operation soapAction="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT/WebServiceToFtp"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebServiceToMail">
+      <soap:operation soapAction="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT/WebServiceToMail"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MFT-WebService">
+    <wsdl:port binding="ns1:SoapBinding" name="MFT-WebServiceMFTPort">
+      <soap:address location="http://wendell.wuerth.com:80/ws/MFT-WebServiceMFTPort?ls=000"/>
+    </wsdl:port>
+  </wsdl:service>
+  <plnk:partnerLinkType name="MFT-WebServiceMFT" wsdl:required="true">
+    <!--:P-->
+    <plnk:role name="role_MFT-WebServiceMFT" wsdl:required="false">
+      <plnk:portType name="ns1:MFT-WebServiceMFTPortType"/>
+    </plnk:role>
+    <plnk:role name="role_MFT-WebServiceMFTLink" wsdl:required="false">
+      <plnk:portType name="ns1:MFT-WebServiceMFTPortType"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsp:Policy wsu:Id="Policy-1" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:MTOM wsp:Optional="true" xmlns:wsoma="http://www.w3.org/2007/08/soap12-mtom-policy"/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\pa047373\Downloads\MFT-WebServiceMFTPort\MFT-WebServiceTypes.xsd</con:url><con:content><![CDATA[<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://uri.seeburger.com/bisas/schema/WebServiceMFT" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://uri.seeburger.com/bisas/schema/WebServiceMFT" xmlns:ns3="http://uri.seeburger.com/bisas/message/schema">
+  <xsd:import namespace="http://uri.seeburger.com/bisas/message/schema" schemaLocation="attachments.xsd"/>
+  <xsd:element name="MailParams" type="MailParamsType"/>
+  <xsd:element name="SeeFXParams" type="SeeFXParamsType"/>
+  <xsd:element name="FtpParams" type="FtpParamsType"/>
+  <xsd:element name="FilesElement" type="FilesType"/>
+  <xsd:element name="Status" type="xsd:string"/>
+  <xsd:complexType name="MailParamsType">
+    <xsd:sequence>
+      <xsd:element name="recipients" type="recipientListType"/>
+      <xsd:element name="subject" type="xsd:string"/>
+      <xsd:element name="body" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SeeFXParamsType">
+    <xsd:sequence>
+      <xsd:element name="amountDownloads" type="xsd:int"/>
+      <xsd:element name="durationDays" type="xsd:int"/>
+      <xsd:element name="passwordProtection" type="xsd:boolean"/>
+      <xsd:element name="locale" type="LocaleType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="LocaleType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="de"/>
+      <xsd:enumeration value="en"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="recipientListType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="recipient" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FtpParamsType">
+    <xsd:sequence>
+      <xsd:element name="URL" type="xsd:string"/>
+      <xsd:element name="Port" type="xsd:int"/>
+      <xsd:element name="Type" type="ftpModeType"/>
+      <xsd:element name="User" type="xsd:string"/>
+      <xsd:element name="Password" type="xsd:string"/>
+      <xsd:element name="Path" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="ftpModeType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="ACTIVE"/>
+      <xsd:enumeration value="PASSIVE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="FilesType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="filename" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ErrorElement" type="ErrorType"/>
+  <xsd:complexType name="ErrorType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="ErrorDetailsElement" type="ErrorDetailsType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ErrorDetailsType">
+    <xsd:sequence>
+      <xsd:element name="errorInfo" type="xsd:string"/>
+      <xsd:element name="errorFilename" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FileListType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="file" type="FileListEntryType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FileListEntryType">
+    <xsd:sequence>
+      <xsd:element name="fileName" type="xsd:string"/>
+      <xsd:element name="fileRef" type="ns3:AttachmentRefType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\pa047373\Downloads\MFT-WebServiceMFTPort\attachments.xsd</con:url><con:content><![CDATA[<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" jxb:extensionBindingPrefixes="xjc" jxb:version="2.0" targetNamespace="http://uri.seeburger.com/bisas/message/schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://uri.seeburger.com/bisas/message/schema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+  <xsd:element name="AttachmentRef" type="AttachmentRefType"/>
+  <xsd:complexType name="AttachmentRefType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="objectInfo">
+        <xsd:complexType>
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+          <xsd:attribute name="location" type="xsd:string" use="optional"/>
+          <xsd:attribute name="size" type="xsd:unsignedLong" use="optional"/>
+          <xsd:attribute name="charset" type="xsd:string" use="optional"/>
+          <xsd:attribute name="creation" type="xsd:dateTime" use="optional"/>
+          <xsd:attribute name="urn" type="xsd:string" use="optional"/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="analyse">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>optional analyse info provided as a DOM structure</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:any namespace="##any" processContents="skip"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="refID" type="xsd:string" use="required"/>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://wendell.wuerth.com:80/ws/MFT-WebServiceMFTPort?ls=000</con:endpoint></con:endpoints><con:operation id="4d4d55f3-e54b-4d30-a246-e4560340da76" isOneWay="false" action="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT/WebServiceToFtp" name="WebServiceToFtp" bindingOperationName="WebServiceToFtp" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bdd097e1-b4cd-42b7-a24a-e01d33a92a2c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wendell-test.wuerth.com:80/ws/MFT-WebServiceMFTPort?ls=200</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://uri.seeburger.com/bisas/schema/WebServiceMFT">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:FilesElement>\r
+         <!--1 or more repetitions:-->\r
+         <web:filename>?</web:filename>\r
+      </web:FilesElement>\r
+      <web:FtpParams>\r
+         <web:URL>?</web:URL>\r
+         <web:Port>?</web:Port>\r
+         <web:Type>?</web:Type>\r
+         <web:User>?</web:User>\r
+         <web:Password>?</web:Password>\r
+         <web:Path>?</web:Path>\r
+      </web:FtpParams>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT/WebServiceToFtp"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3caa6b97-148b-40b8-a51b-06d498a65ac1" isOneWay="false" action="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT/WebServiceToMail" name="WebServiceToMail" bindingOperationName="WebServiceToMail" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d201b87a-032e-468b-9c93-ed17bdec037a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wendell.wuerth.com:80/ws/MFT-WebServiceMFTPort?ls=000</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://uri.seeburger.com/bisas/schema/WebServiceMFT">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:FilesElement>\r
+         <!--1 or more repetitions:-->\r
+         <web:filename>?</web:filename>\r
+      </web:FilesElement>\r
+      <web:MailParams>\r
+         <web:recipients>\r
+            <!--1 or more repetitions:-->\r
+            <web:recipient>?</web:recipient>\r
+         </web:recipients>\r
+         <web:subject>?</web:subject>\r
+         <web:body>?</web:body>\r
+      </web:MailParams>\r
+      <web:SeeFXParams>\r
+         <web:amountDownloads>?</web:amountDownloads>\r
+         <web:durationDays>?</web:durationDays>\r
+         <web:passwordProtection>?</web:passwordProtection>\r
+         <web:locale>?</web:locale>\r
+      </web:SeeFXParams>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://uri.seeburger.com/bisas/interfaces/WebServiceMFT/WebServiceToMail"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Supermarket.API", "Supermarket.API.csproj", "{5BA1F80A-8C6D-4B25-A9FB-6D14AC81B5F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFGetStarted.AspNetCore.ExistingDb", "..\EFGetStarted.AspNetCore.ExistingDb\EFGetStarted.AspNetCore.ExistingDb.csproj", "{31226419-0754-41F3-8ED6-CAD8E9893221}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BA1F80A-8C6D-4B25-A9FB-6D14AC81B5F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA1F80A-8C6D-4B25-A9FB-6D14AC81B5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA1F80A-8C6D-4B25-A9FB-6D14AC81B5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA1F80A-8C6D-4B25-A9FB-6D14AC81B5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31226419-0754-41F3-8ED6-CAD8E9893221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31226419-0754-41F3-8ED6-CAD8E9893221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31226419-0754-41F3-8ED6-CAD8E9893221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31226419-0754-41F3-8ED6-CAD8E9893221}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7C8456A-551A-4452-91C6-DBB9766248B1}
+	EndGlobalSection
+EndGlobal

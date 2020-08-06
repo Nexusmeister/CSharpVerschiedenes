@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[TestTable]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY (1,1), 
+    [Test] INT NULL DEFAULT 5
+)
