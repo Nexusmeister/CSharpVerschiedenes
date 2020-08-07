@@ -1,8 +1,0 @@
-F:\RobinSources\KellerTrack\KellerTrack.Helper\bin\Debug\netstandard2.0\KellerTrack.Helper.deps.json
-F:\RobinSources\KellerTrack\KellerTrack.Helper\bin\Debug\netstandard2.0\KellerTrack.Helper.dll
-F:\RobinSources\KellerTrack\KellerTrack.Helper\bin\Debug\netstandard2.0\KellerTrack.Helper.pdb
-F:\RobinSources\KellerTrack\KellerTrack.Helper\obj\Debug\netstandard2.0\KellerTrack.Helper.csprojAssemblyReference.cache
-F:\RobinSources\KellerTrack\KellerTrack.Helper\obj\Debug\netstandard2.0\KellerTrack.Helper.AssemblyInfoInputs.cache
-F:\RobinSources\KellerTrack\KellerTrack.Helper\obj\Debug\netstandard2.0\KellerTrack.Helper.AssemblyInfo.cs
-F:\RobinSources\KellerTrack\KellerTrack.Helper\obj\Debug\netstandard2.0\KellerTrack.Helper.dll
-F:\RobinSources\KellerTrack\KellerTrack.Helper\obj\Debug\netstandard2.0\KellerTrack.Helper.pdb
